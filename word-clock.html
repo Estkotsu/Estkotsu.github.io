@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" style=">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Word Clock</title>
+  <style>
+    body {
+    background-color: #111;
+}
+
+#clock-container {
+    width: 660px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.clock-row {
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+}
+
+.clock-letter {
+    width: 60px;
+    height: 60px;
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    color: #333;
+    font-family: 'Monda', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.active {
+    color: #ff0000;
+    font-weight: 700;
+    text-shadow: 0 0 12px #FF0000;
+}
+
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href='https://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+
+<div id="clock-container">
+  <div class="clock-row">
+    <div class="clock-letter it active">I</div>
+    <div class="clock-letter it active" >T</div>
+    <div class="clock-letter">E</div>
+    <div class="clock-letter is active">I</div>
+    <div class="clock-letter is active">S</div>
+    <div class="clock-letter">F</div>
+    <div class="clock-letter a">A</div>
+    <div class="clock-letter">L</div>
+    <div class="clock-letter">V</div>
+    <div class="clock-letter">N</div>
+    <div class="clock-letter">E</div>
+  </div>
+  <div class="clock-row">
+    <div class="clock-letter">J</div>
+    <div class="clock-letter quarter">Q</div>
+    <div class="clock-letter quarter">U</div>
+    <div class="clock-letter quarter">A</div>
+    <div class="clock-letter quarter">R</div>
+    <div class="clock-letter quarter">T</div>
+    <div class="clock-letter quarter">E</div>
+    <div class="clock-letter quarter">R</div>
+    <div class="clock-letter">C</div>
+    <div class="clock-letter">K</div>
+    <div class="clock-letter">O</div>
+  </div>
+  <div class="clock-row">
+    <div class="clock-letter twenty">T</div>
+    <div class="clock-letter twenty">W</div>
+    <div class="clock-letter twenty">E</div>
+    <div class="clock-letter twenty">N</div>
+    <div class="clock-letter twenty">T</div>
+    <div class="clock-letter twenty">Y</div>
+    <div class="clock-letter">X</div>
+    <div class="clock-letter five">F</div>
+    <div class="clock-letter five">I</div>
+    <div class="clock-letter five">V</div>
+    <div class="clock-letter five">E</div>
+  </div>
+  <div class="clock-row">
+    <div class="clock-letter half">H</div>
+    <div class="clock-letter half">A</div>
+    <div class="clock-letter half">L</div>
+    <div class="clock-letter half">F</div>
+    <div class="clock-letter">C</div>
+    <div class="clock-letter ten">T</div>
+    <div class="clock-letter ten">E</div>
+    <div class="clock-letter ten">N</div>
+    <div class="clock-letter">G</div>
+    <div class="clock-letter to">T</div>
+    <div class="clock-letter to">O</div>
+  </div>
+  <div class="clock-row">
+    <div class="clock-letter past">P</div>
+    <div class="clock-letter past">A</div>
+    <div class="clock-letter past">S</div>
+    <div class="clock-letter past">T</div>
+    <div class="clock-letter">B</div>
+    <div class="clock-letter 7">S</div>
+    <div class="clock-letter 7">E</div>
+    <div class="clock-letter 7">V</div>
+    <div class="clock-letter 7">E</div>
+    <div class="clock-letter 7">N</div>
+    <div class="clock-letter">L</div>
+  </div>
+  <div class="clock-row">
+    <div class="clock-letter 1">O</div>
+    <div class="clock-letter 1">N</div>
+    <div class="clock-letter 1">E</div>
+    <div class="clock-letter 2">T</div>
+    <div class="clock-letter 2">W</div>
+    <div class="clock-letter 2">O</div>
+    <div class="clock-letter 3">T</div>
+    <div class="clock-letter 3">H</div>
+    <div class="clock-letter 3">R</div>
+    <div class="clock-letter 3">E</div>
+    <div class="clock-letter 3">E</div>
+  </div>
+  <div class="clock-row">
+    <div class="clock-letter 4">F</div>
+    <div class="clock-letter 4">O</div>
+    <div class="clock-letter 4">U</div>
+    <div class="clock-letter 4">R</div>
+    <div class="clock-letter 5">F</div>
+    <div class="clock-letter 5">I</div>
+    <div class="clock-letter 5">V</div>
+    <div class="clock-letter 5">E</div>
+    <div class="clock-letter 6">S</div>
+    <div class="clock-letter 6">I</div>
+    <div class="clock-letter 6">X</div>
+  </div>
+  <div class="clock-row">
+    <div class="clock-letter 9">N</div>
+    <div class="clock-letter 9">I</div>
+    <div class="clock-letter 9">N</div>
+    <div class="clock-letter 9">E</div>
+    <div class="clock-letter">K</div>
+    <div class="clock-letter 12 0">T</div>
+    <div class="clock-letter 12 0">W</div>
+    <div class="clock-letter 12 0">E</div>
+    <div class="clock-letter 12 0">L</div>
+    <div class="clock-letter 12 0">V</div>
+    <div class="clock-letter 12 0">E</div>
+  </div>
+  <div class="clock-row">
+    <div class="clock-letter 8">E</div>
+    <div class="clock-letter 8">I</div>
+    <div class="clock-letter 8">G</div>
+    <div class="clock-letter 8">H</div>
+    <div class="clock-letter 8">T</div>
+    <div class="clock-letter 11">E</div>
+    <div class="clock-letter 11">L</div>
+    <div class="clock-letter 11">E</div>
+    <div class="clock-letter 11">V</div>
+    <div class="clock-letter 11">E</div>
+    <div class="clock-letter 11">N</div>
+  </div>
+  <div class="clock-row">
+    <div class="clock-letter 10">T</div>
+    <div class="clock-letter 10">E</div>
+    <div class="clock-letter 10">N</div>
+    <div class="clock-letter">P</div>
+    <div class="clock-letter">Y</div>
+    <div class="clock-letter oclock">O</div>
+    <div class="clock-letter oclock">C</div>
+    <div class="clock-letter oclock">L</div>
+    <div class="clock-letter oclock">O</div>
+    <div class="clock-letter oclock">C</div>
+    <div class="clock-letter oclock">K</div>
+  </div>
+</div>        
+
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<!-- partial -->
+  <script>$(document).ready(function () {
+  (function (clockJS, $) {
+
+    var currentTime, hour, minute, interval;
+
+    function getTimeValues() {
+      currentTime = new Date();
+      hour = currentTime.getHours() >= 12 ? currentTime.getHours() - 12 : currentTime.getHours();
+      minute = currentTime.getMinutes();
+    }
+
+    function setTime() {
+      updateTime();
+      setTimeout(function () {
+        updateTime();
+        setInterval(function() {
+          updateTime();
+        }, 60000);
+      }, interval * 1000);
+    }
+
+    function updateTime() {
+      getTimeValues();
+
+      // on the hour
+      if (minute >= 58) {
+        $('.five').removeClass('active');
+        $('.to').removeClass('active');
+        $('.oclock').addClass('active');
+
+        $('.' + (hour + 1).toString()).addClass('active');
+      } 
+      // five to
+      else if (minute >= 52) {
+        $('.ten').removeClass('active');
+        $('.five').addClass('active');
+        $('.to').addClass('active');
+
+        $('.' + (hour + 1).toString()).addClass('active');
+      }
+      //ten to
+      else if (minute >= 49) {
+        $('.a').removeClass('active');
+        $('.quarter').removeClass('active');
+        $('.ten').addClass('active');
+        $('.to').addClass('active');
+
+        $('.' + (hour + 1).toString()).addClass('active');
+      }
+      // quarter to
+      else if (minute >= 43) {
+        $('.twenty').removeClass('active');
+        $('.a').addClass('active');
+        $('.quarter').addClass('active');
+        $('.to').addClass('active');
+
+        $('.' + (hour + 1).toString()).addClass('active');
+      }
+      // twenty to
+      else if (minute >= 36) {
+        $('.half').removeClass('active');
+        $('.past').removeClass('active');
+        $('.twenty').addClass('active');
+        $('.to').addClass('active');
+
+        $('.' + hour.toString()).removeClass('active');
+        $('.' + (hour + 1).toString()).addClass('active');
+      }
+      // half past
+      else if (minute >= 26) {
+        $('.twenty').removeClass('active');
+        $('.half').addClass('active');
+        $('.past').addClass('active');
+
+        $('.' + (hour).toString()).addClass('active');
+      }
+      // twenty past
+      else if (minute >= 19) {
+        $('.a').RemoveClass('active');
+        $('.quarter').removeClass('active');
+        $('.twenty').addClass('active');
+        $('.past').addClass('active');
+
+        $('.' + (hour).toString()).addClass('active');
+      }
+      // quarter past
+      else if (minute >= 13) {
+        $('.ten').removeClass('active');
+        $('.a').addClass('active');
+        $('.quarter').addClass('active');
+        $('.past').addClass('active');
+
+        $('.' + (hour).toString()).addClass('active');
+      }
+      // ten past
+      else if (minute >= 9) {
+        $('.five').removeClass('active');
+        $('.ten').addClass('active');
+        $('.past').addClass('active');
+
+        $('.' + (hour).toString()).addClass('active');
+      }
+      // five past
+      else if (minute >= 3) {
+        $('.oclock').removeClass('active');
+        $('.five').addClass('active');
+        $('.past').addClass('active');
+
+        $('.' + (hour).toString()).addClass('active');
+      }
+      // on the hour
+      else {
+        $('.oclock').addClass('active');
+        $('.' + (hour).toString()).addClass('active');
+      }
+    }
+
+    clockJS.init = function () {
+      getTimeValues();
+      interval = 60 - currentTime.getSeconds();
+      if (interval === 60) {
+        interval = 0;
+      }
+      setTime();
+    };
+
+  }(window.clockJS = window.clockJS || {}, jQuery));
+
+  clockJS.init();
+
+});</script>
+
+</body>
+</html>
