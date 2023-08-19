@@ -1,15 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" style=">
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Word Clock</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Word Clock</title>
+<style>
+  body {
+    background-color: #a38d6a;
+}
 
+#clock-container {
+    width: 660px;
+    margin: auto;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.clock-row {
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+}
+
+.clock-letter {
+    width: 60px;
+    height: 60px;
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    color: #8a7555;
+    font-family: 'Monda', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.active {
+    color: #211a16;
+    font-weight: 800;
+}
+</style>  
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <link href='https://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
 
+    
 <div id="clock-container">
   <div class="clock-row">
     <div class="clock-letter it active">I</div>
