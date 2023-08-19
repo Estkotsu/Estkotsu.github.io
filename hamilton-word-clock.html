@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Word Clock</title>
-<style>
-  body {
-    background-color: #a38d6a;
+  <style>
+    body {
+    background-color: rgb(25, 25, 25);
 }
 
 #clock-container {
@@ -28,23 +28,24 @@
     display: block;
     line-height: 60px;
     text-align: center;
-    color: #8a7555;
+    color: #333;
     font-family: 'Monda', Arial, sans-serif;
     font-weight: 400;
     font-size: 20px;
 }
 
 .active {
-    color: #211a16;
-    font-weight: 800;
+    color: #fa023e;
+    font-weight: bold;
+    text-shadow: 0 0 7px #b8002d;
 }
-</style>  
+
+</style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <link href='https://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
 
-    
 <div id="clock-container">
   <div class="clock-row">
     <div class="clock-letter it active">I</div>
@@ -180,7 +181,7 @@
 
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <!-- partial -->
-  <script  >$(document).ready(function () {
+  <script>$(document).ready(function () {
   (function (clockJS, $) {
 
     var currentTime, hour, minute, interval;
@@ -258,7 +259,7 @@
       }
       // twenty past
       else if (minute >= 19) {
-        $('.a').RemoveClass('active');
+        $('.a').removeClass('active');
         $('.quarter').removeClass('active');
         $('.twenty').addClass('active');
         $('.past').addClass('active');
@@ -310,8 +311,7 @@
 
   clockJS.init();
 
-});
-</script>
+});</script>
 
 </body>
 </html>
